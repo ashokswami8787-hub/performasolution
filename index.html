@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Performasolution | Join Channel</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f100e;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Background Pattern */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            opacity: 0.18;
+            background-image:
+                radial-gradient(circle at 20% 20%, #777 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, #777 1px, transparent 1px);
+            background-size: 80px 80px;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 50% 30%, rgba(0, 150, 255, 0.08), transparent 35%),
+                rgba(0, 0, 0, 0.25);
+        }
+
+        /* Main Card */
+        .telegram-card {
+            width: 100%;
+            max-width: 500px;
+            background: #202020;
+            border-radius: 20px;
+            padding: 42px 28px 40px;
+            text-align: center;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.55),
+                0 0 0 1px rgba(255,255,255,0.02);
+        }
+
+        /* Logo */
+        .logo-wrapper {
+            width: 154px;
+            height: 154px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            padding: 8px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 1px #111;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Channel Name */
+        .channel-name {
+            font-size: 34px;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .subscribers {
+            font-size: 18px;
+            color: #888;
+            margin-bottom: 18px;
+        }
+
+        /* Description */
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .description p {
+            font-size: 20px;
+            line-height: 1.35;
+            color: #f4f4f4;
+            font-weight: 400;
+        }
+
+        .description span {
+            margin-right: 5px;
+        }
+
+        /* Join Button */
+        .join-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 185px;
+            padding: 16px 28px;
+            border-radius: 50px;
+            background: #229ed9;
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 25px rgba(34, 158, 217, 0.25);
+
+            animation: zoomButton 1.4s ease-in-out infinite;
+        }
+
+        .join-btn:hover {
+            background: #1590cb;
+        }
+
+        /* Button Animation */
+        @keyframes zoomButton {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 12px;
+            }
+
+            .telegram-card {
+                max-width: 100%;
+                padding: 35px 20px 32px;
+                border-radius: 18px;
+            }
+
+            .logo-wrapper {
+                width: 140px;
+                height: 140px;
+                margin-bottom: 20px;
+            }
+
+            .channel-name {
+                font-size: 30px;
+            }
+
+            .subscribers {
+                font-size: 17px;
+                margin-bottom: 18px;
+            }
+
+            .description {
+                gap: 9px;
+                margin-bottom: 28px;
+            }
+
+            .description p {
+                font-size: 18px;
+            }
+
+            .join-btn {
+                width: 185px;
+                font-size: 16px;
+                padding: 15px 22px;
+            }
+        }
+
+        @media (max-width: 380px) {
+
+            .telegram-card {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .logo-wrapper {
+                width: 125px;
+                height: 125px;
+            }
+
+            .channel-name {
+                font-size: 27px;
+            }
+
+            .description p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="telegram-card">
+
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <img src="logo.jpg" alt="Performasolution Logo" class="logo">
+        </div>
+
+        <!-- Channel Name -->
+        <h1 class="channel-name">
+            Performasolution
+        </h1>
+
+        <!-- Subscribers -->
+        <div class="subscribers">
+            1 subscriber
+        </div>
+
+        <!-- Description -->
+        <div class="description">
+
+            <p>
+                <span>🚀</span>
+                Meta Ads Experts
+            </p>
+
+            <p>
+                <span>📈</span>
+                Stock Market |
+                <span>🎮</span>
+                Gaming
+            </p>
+
+            <p>
+                <span>🎯</span>
+                Targeted Ads • Leads • Campaign Management
+            </p>
+
+            <p>
+                <span>📲</span>
+                Facebook & Instagram Ad
+            </p>
+
+        </div>
+
+        <!-- Join Button -->
+        <a
+            href="https://t.me/+NHNQiIrUj6Y1NWE1"
+            target="_blank"
+            class="join-btn">
+            JOIN CHANNEL
+        </a>
+
+    </div>
+
+</body>
+</html>
